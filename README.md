@@ -20,6 +20,19 @@ Lapathoniia infrastructure code.
 </script>
 ```
 
+## Iframe Fallback
+
+Use this when a host site cannot allow third-party scripts directly:
+
+```html
+<iframe
+  src="https://lapathoniia.top/widgets/ecosystem/v1/frame.html?lang=uk&limit=3"
+  title="Lapathoniia ecosystem projects"
+  loading="lazy"
+  style="width:100%;max-width:520px;height:360px;border:0;">
+</iframe>
+```
+
 The widget fetches public data from:
 
 ```text

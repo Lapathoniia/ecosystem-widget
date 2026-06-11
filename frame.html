@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Lapathoniia Ecosystem Widget</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: transparent;
+      }
+
+      lapathoniia-ecosystem-widget {
+        --lapathoniia-widget-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <lapathoniia-ecosystem-widget></lapathoniia-ecosystem-widget>
+    <script async src="https://lapathoniia.top/widgets/ecosystem/v1/widget.js"></script>
+    <script>
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var widget = document.querySelector("lapathoniia-ecosystem-widget");
+        ["lang", "limit", "api-url"].forEach(function (name) {
+          var value = params.get(name);
+          if (value) widget.setAttribute(name, value);
+        });
+      })();
+    </script>
+  </body>
+</html>
